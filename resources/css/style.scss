@@ -1,0 +1,314 @@
+$blue: #404077;
+$orange: #FF8229;
+$heading-text: #565656;
+$gold: #F2B350;
+$beige: #FFFAF2;
+
+$breakpoint-tablet: 768px;
+
+@keyframes mymove {
+    from {top: -100px;}
+    to {top: 0px;}
+}
+
+// body
+body {
+    font-family: Noto sans, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #2F2F2F;
+    line-height: 1.5em;
+    h1, h2, h3, h4, {
+        font-family: Raleway, sans-serif;
+    }
+}
+// header section 
+header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+        ". . logo logo . fb"
+        ". . logo logo . .";
+    @media only screen and (max-width: 600px) and (min-width: 465px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        ". logo fb";
+    }
+    @media only screen and (max-width: 466px) {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    padding: 1em 0;
+    .social {
+        grid-area: fb;
+        color: $blue;
+        margin: 0 auto;
+    }
+    .logo {
+        grid-area: logo;
+        width: 100%;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
+// navigation
+nav {
+    display: flex;
+    background-color: $blue;
+    padding: 0.7rem;
+    .burgermenu {
+        display: none;
+        color: white;
+        text-decoration: none;
+        &:hover{
+            color: $gold;
+        }
+        @media only screen and (max-width: 465px) {
+            display: block;
+        }
+    }
+    .desktop {
+        display: flex;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        @media only screen and (max-width: 465px) {
+            display: none;
+        }
+    }
+    li {
+        font-size: 0.8em;
+        letter-spacing: 0.025em;
+        text-align: center;
+        padding: 0 1rem;
+        a {
+            text-decoration: none;
+            color: white;
+            position: relative;
+            transition: ease-in 0.4s;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                border-bottom: 2px solid $gold;
+                transition: ease-in .5s;
+            }
+            &:hover:after {
+                width: 100%;
+            }
+        }
+    }
+}
+// Hero image
+.main-top {
+    img {
+    max-width: 100%;
+    height: auto;
+    }  
+}
+// Section Headers
+.heading {
+    margin: 2em auto;
+    color: #565656;
+    border-top: 1px solid $gold;
+    border-bottom: 1px solid $gold;
+    width: 23em;
+    h2 {
+        font-size: 1.25em;
+        text-align: center;
+    }
+    i {
+        color: $gold;
+        text-align: center;
+    }
+}
+// Upcoming Events
+.events-container {
+    margin: 5em 4em;
+    .event-grid-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);        
+        grid-column-gap: 2em;
+        .event-card {
+            img {
+                width: 100%;
+                margin: 0 auto;
+                object-fit: cover;
+            }
+            background-color: $beige;
+            padding: 1em;
+            border: solid 1px $beige;
+            position: relative;
+            &:hover {
+                box-shadow: 0 5px 5px 0 $gold;
+                transition: linear 0.4s;
+            }
+        }
+        .article-title {
+            h3 {
+                font-size: 1.1em;
+                margin-bottom: 0.25em;
+            }
+            h5 {
+                font-size: 0.75em;
+                margin-top: 0;
+                font-weight: 300;
+            }
+        }
+        .readmore {
+            font-size: 0.8em;
+            color: $gold;
+        }
+    }    
+}
+// Support Our Church
+.support-container {
+    background-image: url("../images/support-back.jpg");
+    background-size: cover;
+    padding: 2em;
+    position: relative;
+    animation: mymove 3s;
+    transition: linear 3s;
+    h1 {
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .support-buttons {
+        display: grid;
+        grid-template-columns: 15% repeat(2, 1fr) 15%;
+        grid-column-gap: 2em;
+        margin-bottom: 2em;
+    }
+    .join {
+        grid-column-start: 2;
+    }
+    .join, .give {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: solid 1px white;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        background-color: rgba(255, 253, 249, 0.2);
+        &:hover {
+            background-color: rgba(255, 253, 249, 0.5);
+            color: $heading-text;     
+        }
+        i {
+            font-size: 1.5em;
+        }
+        p {
+            margin: 1em 0 0 0;
+            font-family: Raleway, sans-serif;
+            font-size: 0.9em;
+            letter-spacing: 0.02em;
+        }
+    }
+}
+// Readings for the week
+.readings-container {
+    padding: 4em;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url("../images/reading.jpg");
+    background-size: cover;
+    .readings {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 2em;
+        .card {
+            margin: 0 auto;
+            h4 {
+                font-weight: 600;
+                color: $blue;
+                margin: 0;
+            }
+        }
+    }
+}
+// Mass Schedule
+.sched-container {
+    padding: 4em;
+    .schedule {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em;
+        background-color: $beige;
+        .img-mass {
+            img {
+                width: 100%;
+            }
+        }
+        .mass-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 1.5em;
+            h4 {
+                color: $gold;
+                margin: 1.5em 0 0.25em 0;
+            }
+            p {
+                margin: 0;
+                padding-bottom: 0.5em;
+            }
+        }
+    }
+}
+// Footer
+footer {
+    font-size: 0.8em;
+    .footer-top {
+        display: grid;
+        grid-template-columns: 10% repeat(2,1fr) 10%;
+        padding: 4em 0;
+        background-color: $blue;
+        color: white;
+        .contact {
+            grid-column-start: 2;
+            margin: 0 auto;
+        }
+        .button-footer {
+            margin: 0 auto;
+            .button {
+                text-align: center;
+                padding: 0 3em;
+                margin: 1em 0;
+                border: solid 1px white;
+                border-radius: 0.5em;
+                background-color: rgba(255, 253, 249, 0.2);
+                &:hover {
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+    .poweredby, .copyright {
+        background-color: rgb(180, 180, 180);
+        text-align: center;
+        font-size: 0.75em;
+        p {
+            margin: 0 auto;
+            padding: 1.5em; 
+        }
+    }
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-column-gap: 2em;
+        margin: 0 auto;
+        .netlify {
+            grid-column-start: 4;
+        }
+        img {
+            height: 3.5em;
+            vertical-align: middle;
+        }
+    }
+}
+

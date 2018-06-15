@@ -1,0 +1,356 @@
+@keyframes mymove {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+body {
+  font-family: Noto sans, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #2F2F2F;
+  line-height: 1.5em;
+}
+
+body h1, body h2, body h3, body h4 {
+  font-family: Raleway, sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 20% 80%;
+  grid-template-areas: ". . logo logo . fb" ". . logo logo . .";
+  padding: 1em 0;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 465px) {
+  header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". logo fb";
+  }
+}
+
+@media only screen and (max-width: 466px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+header .social {
+  grid-area: fb;
+  color: #404077;
+  margin: 0 auto;
+}
+
+header .logo {
+  grid-area: logo;
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  background-color: #404077;
+  padding: 0.7rem;
+}
+
+nav .burgermenu {
+  display: none;
+  color: white;
+  text-decoration: none;
+}
+
+nav .burgermenu:hover {
+  color: #F2B350;
+}
+
+@media only screen and (max-width: 465px) {
+  nav .burgermenu {
+    display: block;
+  }
+}
+
+nav .desktop {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media only screen and (max-width: 465px) {
+  nav .desktop {
+    display: none;
+  }
+}
+
+nav li {
+  font-size: 0.8em;
+  letter-spacing: 0.025em;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: ease-in 0.4s;
+}
+
+nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #F2B350;
+  transition: ease-in .5s;
+}
+
+nav li a:hover:after {
+  width: 100%;
+}
+
+.main-top img {
+  max-width: 100%;
+  height: auto;
+}
+
+.heading {
+  margin: 2em auto;
+  color: #565656;
+  border-top: 1px solid #F2B350;
+  border-bottom: 1px solid #F2B350;
+  width: 23em;
+}
+
+.heading h2 {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.heading i {
+  color: #F2B350;
+  text-align: center;
+}
+
+.events-container {
+  margin: 5em 4em;
+}
+
+.events-container .event-grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+}
+
+.events-container .event-grid-wrap .event-card {
+  background-color: #FFFAF2;
+  padding: 1em;
+  border: solid 1px #FFFAF2;
+  position: relative;
+}
+
+.events-container .event-grid-wrap .event-card img {
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.events-container .event-grid-wrap .event-card:hover {
+  box-shadow: 0 5px 5px 0 #F2B350;
+  transition: linear 0.4s;
+}
+
+.events-container .event-grid-wrap .article-title h3 {
+  font-size: 1.1em;
+  margin-bottom: 0.25em;
+}
+
+.events-container .event-grid-wrap .article-title h5 {
+  font-size: 0.75em;
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.events-container .event-grid-wrap .readmore {
+  font-size: 0.8em;
+  color: #F2B350;
+}
+
+.support-container {
+  background-image: url("../images/support-back.jpg");
+  background-size: cover;
+  padding: 2em;
+  position: relative;
+  animation: mymove 3s;
+  transition: linear 3s;
+}
+
+.support-container h1 {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.support-container .support-buttons {
+  display: grid;
+  grid-template-columns: 15% repeat(2, 1fr) 15%;
+  grid-column-gap: 2em;
+  margin-bottom: 2em;
+}
+
+.support-container .join {
+  grid-column-start: 2;
+}
+
+.support-container .join, .support-container .give {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 1px white;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  background-color: rgba(255, 253, 249, 0.2);
+}
+
+.support-container .join:hover, .support-container .give:hover {
+  background-color: rgba(255, 253, 249, 0.5);
+  color: #565656;
+}
+
+.support-container .join i, .support-container .give i {
+  font-size: 1.5em;
+}
+
+.support-container .join p, .support-container .give p {
+  margin: 1em 0 0 0;
+  font-family: Raleway, sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+}
+
+.readings-container {
+  padding: 4em;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: url("../images/reading.jpg");
+  background-size: cover;
+}
+
+.readings-container .readings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 2em;
+}
+
+.readings-container .readings .card {
+  margin: 0 auto;
+}
+
+.readings-container .readings .card h4 {
+  font-weight: 600;
+  color: #404077;
+  margin: 0;
+}
+
+.sched-container {
+  padding: 4em;
+}
+
+.sched-container .schedule {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+  background-color: #FFFAF2;
+}
+
+.sched-container .schedule .img-mass img {
+  width: 100%;
+}
+
+.sched-container .schedule .mass-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.5em;
+}
+
+.sched-container .schedule .mass-text h4 {
+  color: #F2B350;
+  margin: 1.5em 0 0.25em 0;
+}
+
+.sched-container .schedule .mass-text p {
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+footer {
+  font-size: 0.8em;
+}
+
+footer .footer-top {
+  display: grid;
+  grid-template-columns: 10% repeat(2, 1fr) 10%;
+  padding: 4em 0;
+  background-color: #404077;
+  color: white;
+}
+
+footer .footer-top .contact {
+  grid-column-start: 2;
+  margin: 0 auto;
+}
+
+footer .footer-top .button-footer {
+  margin: 0 auto;
+}
+
+footer .footer-top .button-footer .button {
+  text-align: center;
+  padding: 0 3em;
+  margin: 1em 0;
+  border: solid 1px white;
+  border-radius: 0.5em;
+  background-color: rgba(255, 253, 249, 0.2);
+}
+
+footer .footer-top .button-footer .button:hover {
+  background-color: #FF8229;
+}
+
+footer .poweredby, footer .copyright {
+  background-color: #b4b4b4;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+footer .poweredby p, footer .copyright p {
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+footer .img-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-column-gap: 2em;
+  margin: 0 auto;
+}
+
+footer .img-container .netlify {
+  grid-column-start: 4;
+}
+
+footer .img-container img {
+  height: 3.5em;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=style.css.map */

@@ -31,7 +31,6 @@ header {
         ". . logo logo . fb"
         ". . logo logo . .";
     }
-    padding: 1em 0;
     .social {
         grid-area: fb;
         color: $blue;
@@ -43,7 +42,6 @@ header {
         max-width: 70%;
         margin: 0 auto;
     }
-}
 // navigation
 nav {
     display: flex;

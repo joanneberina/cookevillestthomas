@@ -30,15 +30,6 @@ header {
     grid-template-areas: 
         ". . logo logo . fb"
         ". . logo logo . .";
-    @media only screen and (max-width: 600px) and (min-width: 465px) {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-        ". logo fb";
-    }
-    @media only screen and (max-width: 466px) {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
     }
     padding: 1em 0;
     .social {

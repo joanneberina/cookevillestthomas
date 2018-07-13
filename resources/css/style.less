@@ -1,10 +1,8 @@
-$blue: #404077;
-$orange: #FF8229;
-$heading-text: #565656;
-$gold: #F2B350;
-$beige: #FFFAF2;
-
-$breakpoint-tablet: 768px;
+@blue: #404077;
+@orange: #FF8229;
+@heading-text: #565656;
+@gold: #F2B350;
+@beige: #FFFAF2;
 
 @keyframes mymove {
     from {top: -100px;}
@@ -33,7 +31,7 @@ header {
     }
     .social {
         grid-area: fb;
-        color: $blue;
+        color: @blue;
         margin: 0 auto;
     }
     .logo {
@@ -45,14 +43,14 @@ header {
 // navigation
 nav {
     display: flex;
-    background-color: $blue;
+    background-color: @blue;
     padding: 0.7rem;
     .burgermenu {
         display: none;
         color: white;
         text-decoration: none;
         &:hover{
-            color: $gold;
+            color: @gold;
         }
         @media only screen and (max-width: 465px) {
             display: block;
@@ -83,7 +81,7 @@ nav {
                 bottom: 0;
                 left: 0;
                 width: 0%;
-                border-bottom: 2px solid $gold;
+                border-bottom: 2px solid @gold;
                 transition: ease-in .5s;
             }
             &:hover:after {
@@ -103,15 +101,15 @@ nav {
 .heading {
     margin: 2em auto;
     color: #565656;
-    border-top: 1px solid $gold;
-    border-bottom: 1px solid $gold;
+    border-top: 1px solid @gold;
+    border-bottom: 1px solid @gold;
     width: 23em;
     h2 {
         font-size: 1.25em;
         text-align: center;
     }
     i {
-        color: $gold;
+        color: @gold;
         text-align: center;
     }
 }
@@ -128,12 +126,12 @@ nav {
                 margin: 0 auto;
                 object-fit: cover;
             }
-            background-color: $beige;
+            background-color: @beige;
             padding: 1em;
-            border: solid 1px $beige;
+            border: solid 1px @beige;
             position: relative;
             &:hover {
-                box-shadow: 0 5px 5px 0 $gold;
+                box-shadow: 0 5px 5px 0 @gold;
                 transition: linear 0.4s;
             }
         }
@@ -150,7 +148,7 @@ nav {
         }
         .readmore {
             font-size: 0.8em;
-            color: $gold;
+            color: @gold;
         }
     }    
 }
@@ -187,7 +185,7 @@ nav {
         background-color: rgba(255, 253, 249, 0.2);
         &:hover {
             background-color: rgba(255, 253, 249, 0.5);
-            color: $heading-text;     
+            color: @heading-text;     
         }
         i {
             font-size: 1.5em;
@@ -214,7 +212,7 @@ nav {
             margin: 0 auto;
             h4 {
                 font-weight: 600;
-                color: $blue;
+                color: @blue;
                 margin: 0;
             }
         }
@@ -227,7 +225,7 @@ nav {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 1em;
-        background-color: $beige;
+        background-color: @beige;
         .img-mass {
             img {
                 width: 100%;
@@ -239,7 +237,7 @@ nav {
             justify-content: center;
             padding: 0 1.5em;
             h4 {
-                color: $gold;
+                color: @gold;
                 margin: 1.5em 0 0.25em 0;
             }
             p {
@@ -256,7 +254,7 @@ footer {
         display: grid;
         grid-template-columns: 10% repeat(2,1fr) 10%;
         padding: 4em 0;
-        background-color: $blue;
+        background-color: @blue;
         color: white;
         .contact {
             grid-column-start: 2;
@@ -272,7 +270,7 @@ footer {
                 border-radius: 0.5em;
                 background-color: rgba(255, 253, 249, 0.2);
                 &:hover {
-                    background-color: $orange;
+                    background-color: @orange;
                 }
             }
         }

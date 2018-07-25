@@ -1,0 +1,124 @@
+@smartphone: ~"only screen and (max-width: 740px)";
+@tablet: ~"only screen and (min-width: 741px) and (max-width: 960px)";
+@blue: #404077;
+@orange: #FF8229;
+@heading-text: #565656;
+@gold: #F2B350;
+@beige: #FFFAF2;
+
+@media @smartphone {
+// header section 
+    header {
+        display: block;
+        .social {
+            display: none;
+        }
+        .logo {
+            max-width: 18rem;
+        }
+    }
+// navigation
+    nav {
+        .desktop {
+            display: none;
+        }
+        .burgermenu {
+            display: flex;
+            width: 100%;      
+            a {   
+            color: white; 
+            text-decoration: none;
+                &:hover {
+                color: @gold;
+                }
+            }
+            .menu {
+                flex-grow: 1;
+            }
+        }
+    }
+// Hero image
+    .main-top {
+        min-height: 25rem;
+    }
+// Upcoming Events
+    .events-container {
+        .event-grid-wrap {
+            display: block;
+        }
+        .event-card {
+            margin-bottom: 2rem;
+        }
+    }
+// Support Our Church
+    .support-container {
+        .support-buttons {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            .join {
+                display: block;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+// Readings for the week
+    .readings-container {
+        .readings {
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+            .card {
+                border-bottom: 1px solid @gold;
+            }
+        }
+    }
+// Mass Schedule
+    .sched-container {
+        margin: 2rem 0;
+        .schedule {
+            display: block;
+            .mass-text {
+                padding: 2rem;
+            }
+        }
+    }
+// Footer
+    footer {
+        .footer-top {
+            display: block;
+            padding: 2rem;
+           .contact, .button-footer {
+               width: 80%;
+               text-align: center;
+           }
+        }
+        .poweredby{
+            .img-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    height: 2rem;
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media @tablet {
+    header {
+        .logo {
+            max-width: 20rem;
+        }
+    }
+    .readings-container {
+        .readings {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 1.5rem;
+        }
+    }
+}

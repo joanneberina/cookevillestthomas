@@ -1,0 +1,92 @@
+@media only screen and (max-width: 740px) {
+  header {
+    display: block;
+  }
+  header .social {
+    display: none;
+  }
+  header .logo {
+    max-width: 18rem;
+  }
+  nav .desktop {
+    display: none;
+  }
+  nav .burgermenu {
+    display: flex;
+    width: 100%;
+  }
+  nav .burgermenu a {
+    color: white;
+    text-decoration: none;
+  }
+  nav .burgermenu a:hover {
+    color: #F2B350;
+  }
+  nav .burgermenu .menu {
+    flex-grow: 1;
+  }
+  .main-top {
+    min-height: 25rem;
+  }
+  .events-container .event-grid-wrap {
+    display: block;
+  }
+  .events-container .event-card {
+    margin-bottom: 2rem;
+  }
+  .support-container .support-buttons {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .support-container .support-buttons .join {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .readings-container .readings {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .readings-container .readings .card {
+    border-bottom: 1px solid #F2B350;
+  }
+  .sched-container {
+    margin: 2rem 0;
+  }
+  .sched-container .schedule {
+    display: block;
+  }
+  .sched-container .schedule .mass-text {
+    padding: 2rem;
+  }
+  footer .footer-top {
+    display: block;
+    padding: 2rem;
+  }
+  footer .footer-top .contact,
+  footer .footer-top .button-footer {
+    width: 80%;
+    text-align: center;
+  }
+  footer .poweredby .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .poweredby .img-container img {
+    height: 2rem;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (min-width: 741px) and (max-width: 960px) {
+  header .logo {
+    max-width: 20rem;
+  }
+  .readings-container .readings {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
+  }
+}

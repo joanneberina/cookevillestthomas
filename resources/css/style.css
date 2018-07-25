@@ -76,7 +76,7 @@ nav li a:hover:after {
 }
 .main-top {
   width: 100%;
-  height: calc(40vw);
+  height: calc(33.33333333vw);
   background-image: url("../images/inside-church.jpg");
   background-size: cover;
   background-position: center;

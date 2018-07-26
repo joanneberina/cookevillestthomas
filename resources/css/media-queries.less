@@ -1,6 +1,6 @@
 @smartphone: ~"only screen and (max-width: 740px)";
-@tablet: ~"only screen and (min-width: 741px) and (max-width: 960px)";
-@large-desktop: ~"only screen and (max-width: 1401px)";
+@tablet: ~"only screen and (min-width: 741px)";
+@large-desktop: ~"only screen and (min-width: 1401px)";
 @blue: #404077;
 @orange: #FF8229;
 @heading-text: #565656;
@@ -15,7 +15,7 @@
             display: none;
         }
         .logo {
-            max-width: 18rem;
+            max-width: 15rem;
         }
     }
 // navigation
@@ -29,6 +29,7 @@
             a {   
             color: white; 
             text-decoration: none;
+            font-size: 0.9rem;
                 &:hover {
                 color: @gold;
                 }
@@ -42,20 +43,35 @@
     .main-top {
         min-height: 25rem;
     }
+
+// headings
+    .heading {
+        margin: 2rem auto;
+        width: 90%;
+        max-width: 70%;
+    }
+
 // Upcoming Events
     .events-container {
+        padding: 2rem 0;
         .event-grid-wrap {
             display: block;
         }
         .event-card {
-            margin-bottom: 2rem;
+            width: 80%;
+            max-width: 60%;
+            margin: 1rem auto;
+            .img-event {
+                margin: 0 auto;
+            }
         }
     }
 // Support Our Church
     .support-container {
         .support-buttons {
             display: block;
-            width: 80%;
+            width: 60%;
+            max-width: 40%;
             margin: 0 auto;
             .join {
                 display: block;
@@ -76,9 +92,13 @@
     }
 // Mass Schedule
     .sched-container {
-        margin: 2rem 0;
+        margin: 2rem auto;
         .schedule {
             display: block;
+            margin: 0 auto;
+            .img-mass {
+                max-height: 15rem;
+            }
             .mass-text {
                 padding: 2rem;
             }
@@ -97,11 +117,11 @@
         .poweredby{
             .img-container {
                 display: flex;
-                align-items: center;
+                width: 100%;
                 justify-content: center;
                 img {
-                    height: 2rem;
-                    padding: 0 1rem;
+                    height: 1.5rem;
+                    padding-right: 0.5rem;
                 }
             }
         }
@@ -109,17 +129,30 @@
 }
 
 @media @tablet {
-    header {
-        .logo {
-            max-width: 20rem;
-        }
-    }
+// Readings for the week
     .readings-container {
         .readings {
             display: grid;
             width: 100%;
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 1.5rem;
+        }
+    }
+    .support-container {
+        .support-buttons {  
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media @large-desktop {
+    .sched-container {
+        width: 50%;
+        .schedule {
+            .img-mass {
+                max-width: 25rem;
+            }
         }
     }
 }

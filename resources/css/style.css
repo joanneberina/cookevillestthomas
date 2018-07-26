@@ -33,7 +33,7 @@ header {
 .logo {
   grid-area: logo;
   width: 100%;
-  max-width: 25rem;
+  max-width: 15rem;
   margin: 0 auto;
 }
 nav {
@@ -51,7 +51,7 @@ nav .desktop {
   padding: 0.5rem 0;
 }
 nav li {
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 0.025rem;
   text-align: center;
   padding: 0 1.5rem;
@@ -212,7 +212,7 @@ nav li a:hover:after {
 }
 .sched-container .schedule .img-mass {
   width: 100%;
-  height: calc(50vh);
+  height: calc(33.33333333vh);
   background-image: url("../images/masstimes.jpg");
   background-size: cover;
   background-position: center;
@@ -263,8 +263,7 @@ footer .poweredby,
 footer .copyright {
   background-color: #b4b4b4;
   text-align: center;
-  font-size: 0.75rem;
-  padding: 0.5rem 0;
+  font-size: 0.6rem;
 }
 footer .poweredby .img-container,
 footer .copyright .img-container {
@@ -279,11 +278,11 @@ footer .copyright .img-container .netlify {
 }
 footer .poweredby .img-container img,
 footer .copyright .img-container img {
-  height: 2.5rem;
+  height: 2rem;
   vertical-align: middle;
 }
 footer .poweredby p,
 footer .copyright p {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
 }

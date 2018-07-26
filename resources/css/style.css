@@ -190,7 +190,7 @@ nav li a:hover:after {
 }
 .readings-container .readings {
   display: flex;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 .readings-container .readings .card {

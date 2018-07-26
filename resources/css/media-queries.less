@@ -1,6 +1,6 @@
 @smartphone: ~"only screen and (max-width: 740px)";
 @tablet: ~"only screen and (min-width: 741px)";
-@large-desktop: ~"only screen and (min-width: 1401px)";
+@large-desktop: ~"only screen and (min-width: 1600px)";
 @blue: #404077;
 @orange: #FF8229;
 @heading-text: #565656;
@@ -84,7 +84,7 @@
     .readings-container {
         .readings {
             display: block;
-            width: 80%;
+            width: 70%;
             margin: 0 auto;
             .card {
                 border-bottom: 1px solid @gold;
@@ -140,7 +140,7 @@
     .readings-container {
         .readings {
             display: grid;
-            width: 100%;
+            width: 95%;
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 1.5rem;
         }
@@ -153,6 +153,17 @@
     }
 }
 
+@media @large-desktop {
+// Readings for the week
+    .readings-container {
+        .readings {
+            display: grid;
+            width: 70%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 1rem;
+        }
+    }
+}
 @media @tablet, @large-desktop {
     .sched-container {
         width: 75%;

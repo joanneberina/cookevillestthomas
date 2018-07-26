@@ -61,7 +61,7 @@
   }
   .readings-container .readings {
     display: block;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
   }
   .readings-container .readings .card {
@@ -107,7 +107,7 @@
 @media only screen and (min-width: 741px) {
   .readings-container .readings {
     display: grid;
-    width: 100%;
+    width: 95%;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1.5rem;
   }
@@ -116,7 +116,15 @@
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 741px), only screen and (min-width: 1401px) {
+@media only screen and (min-width: 1600px) {
+  .readings-container .readings {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+  }
+}
+@media only screen and (min-width: 741px), only screen and (min-width: 1600px) {
   .sched-container {
     width: 75%;
   }

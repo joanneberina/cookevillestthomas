@@ -18,7 +18,8 @@
   nav .burgermenu a {
     color: white;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 0.2rem;
   }
   nav .burgermenu a:hover {
     color: #F2B350;
@@ -42,7 +43,7 @@
   }
   .events-container .event-card {
     width: 80%;
-    max-width: 60%;
+    max-width: 70%;
     margin: 1rem auto;
   }
   .events-container .event-card .img-event {
@@ -50,8 +51,8 @@
   }
   .support-container .support-buttons {
     display: block;
-    width: 60%;
-    max-width: 40%;
+    width: 70%;
+    max-width: 60%;
     margin: 0 auto;
   }
   .support-container .support-buttons .join {
@@ -60,13 +61,14 @@
   }
   .readings-container .readings {
     display: block;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
   }
   .readings-container .readings .card {
     border-bottom: 1px solid #F2B350;
   }
   .sched-container {
+    width: 80%;
     margin: 2rem auto;
   }
   .sched-container .schedule {
@@ -81,12 +83,16 @@
   }
   footer .footer-top {
     display: block;
-    padding: 2rem;
+    padding: 2rem 0;
   }
-  footer .footer-top .contact,
-  footer .footer-top .button-footer {
+  footer .footer-top .contact {
     width: 80%;
     text-align: center;
+  }
+  footer .footer-top .button-footer {
+    width: 60%;
+    max-width: 50%;
+    margin-top: 2rem;
   }
   footer .poweredby .img-container {
     display: flex;
@@ -110,11 +116,11 @@
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 1401px) {
+@media only screen and (min-width: 741px), only screen and (min-width: 1401px) {
   .sched-container {
-    width: 50%;
+    width: 75%;
   }
   .sched-container .schedule .img-mass {
-    max-width: 25rem;
+    max-height: 30rem;
   }
 }

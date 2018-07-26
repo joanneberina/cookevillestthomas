@@ -29,11 +29,12 @@ header {
   grid-area: fb;
   color: #404077;
   margin: 0 auto;
+  font-size: 1.2rem;
 }
 .logo {
   grid-area: logo;
   width: 100%;
-  max-width: 15rem;
+  max-width: 20rem;
   margin: 0 auto;
 }
 nav {
@@ -51,7 +52,7 @@ nav .desktop {
   padding: 0.5rem 0;
 }
 nav li {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   letter-spacing: 0.025rem;
   text-align: center;
   padding: 0 1.5rem;
@@ -202,7 +203,7 @@ nav li a:hover:after {
   margin: 0;
 }
 .sched-container {
-  padding: 2rem;
+  margin: 2rem auto;
 }
 .sched-container .schedule {
   display: grid;
@@ -221,7 +222,7 @@ nav li a:hover:after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
 }
 .sched-container .schedule .mass-text h4 {
   color: #F2B350;
@@ -232,7 +233,7 @@ nav li a:hover:after {
   padding-bottom: 0.5rem;
 }
 footer {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 footer .footer-top {
   display: grid;
@@ -249,6 +250,7 @@ footer .footer-top .button-footer {
   margin: 0 auto;
 }
 footer .footer-top .button-footer .button {
+  font-size: 1rem;
   text-align: center;
   padding: 0 3rem;
   margin: 1rem 0;

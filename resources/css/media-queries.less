@@ -29,7 +29,8 @@
             a {   
             color: white; 
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            padding: 0.2rem;
                 &:hover {
                 color: @gold;
                 }
@@ -59,7 +60,7 @@
         }
         .event-card {
             width: 80%;
-            max-width: 60%;
+            max-width: 70%;
             margin: 1rem auto;
             .img-event {
                 margin: 0 auto;
@@ -70,8 +71,8 @@
     .support-container {
         .support-buttons {
             display: block;
-            width: 60%;
-            max-width: 40%;
+            width: 70%;
+            max-width: 60%;
             margin: 0 auto;
             .join {
                 display: block;
@@ -83,7 +84,7 @@
     .readings-container {
         .readings {
             display: block;
-            width: 50%;
+            width: 80%;
             margin: 0 auto;
             .card {
                 border-bottom: 1px solid @gold;
@@ -92,6 +93,7 @@
     }
 // Mass Schedule
     .sched-container {
+        width: 80%;
         margin: 2rem auto;
         .schedule {
             display: block;
@@ -108,10 +110,15 @@
     footer {
         .footer-top {
             display: block;
-            padding: 2rem;
-           .contact, .button-footer {
+            padding: 2rem 0;
+           .contact {
                width: 80%;
                text-align: center;
+           }
+           .button-footer {
+               width: 60%;
+               max-width: 50%;
+               margin-top: 2rem;
            }
         }
         .poweredby{
@@ -146,12 +153,12 @@
     }
 }
 
-@media @large-desktop {
+@media @tablet, @large-desktop {
     .sched-container {
-        width: 50%;
+        width: 75%;
         .schedule {
             .img-mass {
-                max-width: 25rem;
+                max-height: 30rem;
             }
         }
     }

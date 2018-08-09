@@ -1,0 +1,65 @@
+{
+  "backend": {
+    "name": "github",
+    "repo": "joanneberina/cookevillestthomas",
+    "branch": "master"
+  },
+  "publish_mode": "editorial_workflow",
+  "display_url": "https://saintthomasaquinaschurch.com",
+  "media_folder": "~/content/public/uploads",
+  "public_folder": "/uploads",
+  "collections": [
+    {
+      "name": "events",
+      "label": "Post",
+      "description":
+        "The description is a great place for tone setting, high level information, and editing guidelines that are specific to a collection.\n",
+      "folder": "src/posts",
+      "slug": "{{year}}-{{month}}-{{day}}-{{slug}}",
+      "create": true,
+      "fields": [
+        {
+          "label": "Layout",
+          "name": "layout",
+          "widget": "hidden",
+          "default": "blog"
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "widget": "string"
+        },
+        {
+          "label": "Publish Date",
+          "name": "date",
+          "widget": "datetime",
+          "format": "YYYY-MM-DD hh:mma"
+        },
+        {
+          "label": "Event Date",
+          "name": "event-date",
+          "widget": "datetime",
+          "format": "YYYY-MM-DD"
+        },
+        {
+          "label": "Feature Image",
+          "name": "thumbnail",
+          "widget": "image",
+          "required": false
+        },
+        {
+          "label": "Body",
+          "name": "body",
+          "widget": "markdown"
+        }
+      ],
+      "meta": [
+        {
+          "label": "SEO Description",
+          "name": "description",
+          "widget": "text"
+        }
+      ]
+    }
+  ]
+}

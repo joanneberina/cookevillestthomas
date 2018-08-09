@@ -1,6 +1,6 @@
 {
   "backend": {
-    "name": "github",
+    "name": "git-gateway",
     "repo": "joanneberina/cookevillestthomas",
     "branch": "master"
   },
@@ -12,8 +12,7 @@
     {
       "name": "events",
       "label": "Post",
-      "description":
-        "The description is a great place for tone setting, high level information, and editing guidelines that are specific to a collection.\n",
+      "description": "The description is a great place for tone setting, high level information, and editing guidelines that are specific to a collection.\n",
       "folder": "src/posts",
       "slug": "{{year}}-{{month}}-{{day}}-{{slug}}",
       "create": true,

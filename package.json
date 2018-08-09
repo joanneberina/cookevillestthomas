@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "parcel build ./src/index.html",
+    "build": "parcel build ./src/index.html && cp _redirects ./dist/",
     "start": "parcel ./src/index.html --open"
   },
   "repository": {
